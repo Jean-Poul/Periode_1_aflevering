@@ -1,0 +1,26 @@
+{
+  "name": "TypeScript_exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ex": "ts-node ./src/interface1.ts",
+    "extwo": "ts-node ./src/interface2.ts",
+    "exthree": "ts-node ./src/chuckNorrisFetcher.ts",
+    "exfour": "ts-node ./src/generics.ts",
+    "exfive": "ts-node ./src/inheritance.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/node-fetch": "^2.5.8",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}

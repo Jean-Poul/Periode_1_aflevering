@@ -1,0 +1,17 @@
+1) the entry point: Where to start ( relative path ('./') )
+
+2) the output: Where to end and what to create
+	    var path = require('path')
+	    path: path.resolve(__dirname, 'dist'),
+	    filename: 'bundle.js',
+	    publicPath: '/dist'  <-- absolute path
+
+--------------------------------------------------------
+	IN BETWEEN DURING THIS JOURNEY
+--------------------------------------------------------
+
+3) modules: what to do with them and module rules - what should you do with each individual file you load
+
+4) plugins: right before we create the bundle - what should you do with the prepared code, with the overall code
+	    like should you minify it ( var webpack = require('webpack') -> new webpack.optimize.UglifyJsPlugin({}) )
+	    or do something else like plugins to outsource your css code into seperate stylesheets
