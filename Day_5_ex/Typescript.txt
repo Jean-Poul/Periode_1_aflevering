@@ -1,0 +1,58 @@
+*** Commands and notes ***
+
+For at installere TypeScript: npm install -g typescript
+
+For at se TypeScript version: tsc --version
+
+For at compile ens TypeScript til JavaScript: tsc filename.ts
+
+For at lave en TypeScript config fil: tsc -init
+	- HUSK at hvis jeg nu skal have tsc compileren til at virke efter hensigten, skal jeg ikke skrive filnavn,
+	  some jeg gjorde først, men bare tsc. Herved vil compileren lave en build folder og lave en .map fil så man kan debugge,
+	  og en .js fil, som er det oversatte kode fra TS.
+	- Hvis man ikke vil compile hele tiden kan man skrive tsc -watch og der vil blive compilet imens man laver
+	  ændringer i sin kode.
+
+	- Herinde kan jeg gå til "outDir": "./foldername", (Her bliver ens compiled ts kode smidt hen, så ens projekt eller bliver for rodet).
+	- Gå til "sourceMap": true, (Ved at sætte denne command til kan jeg nu debugge min oversatte kode, som er i JavaScript)
+	- For at bestemme hvilken version af JS man vil compilere til gå man til "target": "esVERSIONNR",
+	- "module": "commonjs", betyder at jeg skal bruge require('') for at importe og Module.exports for at exporte
+
+
+CTRL+SHIFT+b for at få build options frem i visual studio code.
+
+
+TypeScript is here to be able to make JavaScript scale.
+A CommonJS module is essentially a reusable piece of JavaScript which exports specific objects, making 
+them available for other modules to require in their programs.
+
+STATIC meaning:
+In the Java programming language, the keyword static indicates that the particular member belongs to a type 
+itself, rather than to an instance of that type. This means that only one instance of that static member is 
+created which is shared across all instances of the class.
+
+Example: static means that the variable or method marked as such is available at the class level. 
+In other words, you don't need to create an instance of the class to access it.
+
+public class Foo {
+    public static void doStuff(){
+        // does stuff
+    }
+}
+
+So, instead of creating an instance of Foo and then calling doStuff like this:
+
+Foo f = new Foo();
+f.doStuff();
+
+You just call the method directly against the class, like so:
+
+Foo.doStuff();
+
+-----------------------------------------------------------------------------
+
+Transpiling betyder at man compiler nyere kode til ældre kode (godt eksempel er hvordan man bruger babel).
+Transpilers, or source-to-source compilers, are tools that read source code written in one programming language, and 
+produce the equivalent code in another language. Languages you write that transpile to JavaScript are often called compile-to-JS 
+languages, and are said to target JavaScript.
+
